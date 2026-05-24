@@ -13,8 +13,12 @@ mux4to1:
 d_ff:
 	$(MAKE) -C d_flip_flop d_ff
 
+counter_8bit:
+	$(MAKE) -C counter counter_8bit
+
 clean:
 	$(MAKE) -C and_gate clean
 	$(MAKE) -C adder clean
 	$(MAKE) -C mux clean
 	$(MAKE) -C d_flip_flop clean
+	$(MAKE) -C counter clean
