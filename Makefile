@@ -16,9 +16,13 @@ d_ff:
 counter_8bit:
 	$(MAKE) -C counter counter_8bit
 
+traffic_light:
+	$(MAKE) -C traffic_light
+
 clean:
 	$(MAKE) -C and_gate clean
 	$(MAKE) -C adder clean
 	$(MAKE) -C mux clean
 	$(MAKE) -C d_flip_flop clean
 	$(MAKE) -C counter clean
+	$(MAKE) -C traffic_light clean
