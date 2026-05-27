@@ -25,6 +25,9 @@ jk_ff:
 lfsr_4bit:
 	$(MAKE) -C lfsr lfsr_4bit
 
+alu_xbit:
+	$(MAKE) -C alu alu_xbit
+
 clean:
 	$(MAKE) -C and_gate clean
 	$(MAKE) -C adder clean
@@ -34,3 +37,4 @@ clean:
 	$(MAKE) -C traffic_light clean
 	$(MAKE) -C jk_flip_flop clean
 	$(MAKE) -C lfsr clean
+	$(MAKE) -C alu clean

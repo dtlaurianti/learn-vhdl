@@ -1,0 +1,7 @@
+rule:
+  signal_007:
+    disable: true
+  instantiation_010:
+    method: 'entity'
+  instantiation_034:
+    method: 'entity'
