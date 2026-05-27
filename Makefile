@@ -22,6 +22,9 @@ traffic_light:
 jk_ff:
 	$(MAKE) -C jk_flip_flop
 
+lfsr_4bit:
+	$(MAKE) -C lfsr lfsr_4bit
+
 clean:
 	$(MAKE) -C and_gate clean
 	$(MAKE) -C adder clean
@@ -30,3 +33,4 @@ clean:
 	$(MAKE) -C counter clean
 	$(MAKE) -C traffic_light clean
 	$(MAKE) -C jk_flip_flop clean
+	$(MAKE) -C lfsr clean
