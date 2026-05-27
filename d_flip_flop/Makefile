@@ -1,3 +1,5 @@
+all: d_ff
+
 export GHDLFLAGS = --std=08
 
 d_ff:

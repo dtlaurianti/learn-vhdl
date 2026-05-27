@@ -1,3 +1,5 @@
+all: jk_ff
+
 export GHDLFLAGS = --std=08
 
 jk_ff:

@@ -1,3 +1,5 @@
+all: alu_xbit
+
 export GHDLFLAGS = --std=08
 
 alu_xbit:

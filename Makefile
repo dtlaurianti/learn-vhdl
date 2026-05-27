@@ -1,40 +1,19 @@
-and_gate:
-	$(MAKE) -C and_gate
+SUBDIRS := $(patsubst %/,%,$(dir $(wildcard */Makefile)))
 
-full_adder:
-	$(MAKE) -C adder full_adder
+CLEAN_SUBDIRS := $(addprefix clean-,$(SUBDIRS))
 
-ripple_adder:
-	$(MAKE) -C adder ripple_adder
+.PHONY: all clean $(SUBDIRS) $(CLEAN_SUBDIRS)
 
-mux4to1:
-	$(MAKE) -C mux mux4to1
+all: $(SUBDIRS)
 
-d_ff:
-	$(MAKE) -C d_flip_flop d_ff
+$(SUBDIRS):
+	@echo "========================================"
+	@echo " Building Sub-project: $@"
+	@echo "========================================"
+	$(MAKE) -C $@
 
-counter_8bit:
-	$(MAKE) -C counter counter_8bit
+clean: $(CLEAN_SUBDIRS)
+	@echo "All projects cleaned."
 
-traffic_light:
-	$(MAKE) -C traffic_light
-
-jk_ff:
-	$(MAKE) -C jk_flip_flop
-
-lfsr_4bit:
-	$(MAKE) -C lfsr lfsr_4bit
-
-alu_xbit:
-	$(MAKE) -C alu alu_xbit
-
-clean:
-	$(MAKE) -C and_gate clean
-	$(MAKE) -C adder clean
-	$(MAKE) -C mux clean
-	$(MAKE) -C d_flip_flop clean
-	$(MAKE) -C counter clean
-	$(MAKE) -C traffic_light clean
-	$(MAKE) -C jk_flip_flop clean
-	$(MAKE) -C lfsr clean
-	$(MAKE) -C alu clean
+$(CLEAN_SUBDIRS):
+	$(MAKE) -C $(patsubst clean-%,%,$@) clean

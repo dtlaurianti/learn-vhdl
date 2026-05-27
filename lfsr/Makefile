@@ -1,3 +1,5 @@
+all: lfsr_4bit
+
 export GHDLFLAGS = --std=08
 
 lfsr_4bit:
