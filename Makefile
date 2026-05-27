@@ -19,6 +19,9 @@ counter_8bit:
 traffic_light:
 	$(MAKE) -C traffic_light
 
+jk_ff:
+	$(MAKE) -C jk_flip_flop
+
 clean:
 	$(MAKE) -C and_gate clean
 	$(MAKE) -C adder clean
@@ -26,3 +29,4 @@ clean:
 	$(MAKE) -C d_flip_flop clean
 	$(MAKE) -C counter clean
 	$(MAKE) -C traffic_light clean
+	$(MAKE) -C jk_flip_flop clean
