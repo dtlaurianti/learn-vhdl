@@ -1,0 +1,4 @@
+[libraries.learn]
+files = [
+    "**/*.vhd"
+]
