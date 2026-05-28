@@ -1,0 +1,7 @@
+cocotb @ git+https://github.com/cocotb/cocotb@4aca0513dd94af0502e2ee3667d44846e73867fe
+find_libpython==0.5.1
+iniconfig==2.3.0
+packaging==26.2
+pluggy==1.6.0
+Pygments==2.20.0
+pytest==9.0.3
